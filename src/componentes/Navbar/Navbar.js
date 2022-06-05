@@ -1,38 +1,51 @@
-import React, { Component } from "react";
-import { MenuItems } from "./MenuItems";
-import { Button } from "../Button";
-import './Navbar.css'
+import React, { useState, useEffect } from 'react';
 
-class Navbar extends Component {
-  state = { clicked: false }
+import CartWidget from '../CartWidget';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-  handleClick = () => {
-    this.setState({ clicked: !this.state.clicked })
-  }
-    render () {
-      return(
-        <nav className="NavbarItems">
-          <h1 className="navbar-logo">React<i className="fab fa-react"></i></h1>
-          <div className="menu-icon" onClick={this.handleClick}>
-            <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
+import './Navbar.css';
 
-          </div>
-          <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-            {MenuItems.map((item, index) => {
-              return ( 
-                <li key={index}>
-                  <a className={MenuItems.cName} href={item.url}>
-                  {item.title}
-                  </a>
-                </li>
-              )
-            })}
-            
+const NavBar = () => {
+  const brand =
+    'https://i.ibb.co/3hn05sy/kross-2-1.png';
+  return (
+    <header className={`header background--transparent`}>
+      <div className="header-container">
+        
+        <div className="menu-button">
+          <FontAwesomeIcon icon={faBars} size="lg" color="white" />
+          <span>Menu</span>
+        </div>
+
+        
+        <nav>
+          <ul className="nav-container">
+            <li>
+              <a href="/">Inicio</a>
+            </li>
+            <li className="products-item">
+              <a href="/">
+                Productos <span className="arrow"></span>
+              </a>
+            </li>
+            <li>
+              <a href="/">Blog</a>
+            </li>
+            <li>
+              <a href="/">Contacto</a>
+            </li>
           </ul>
-          <Button>Inscribete</Button>
         </nav>
-      )
-    }
-}
+        
+        <div className="logo-container">
+          <img src={brand} alt="logo" />
+        </div>
+        
+        <CartWidget />
+      </div>
+    </header>
+  );
+};
 
-export default Navbar
+export default NavBar;
