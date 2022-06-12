@@ -1,4 +1,4 @@
-Proyecto Primera entrega Final de React JS de CoderHouse
+# Proyecto Primera entrega Final de React JS de CoderHouse
 
 ( Comisión 31865 )
 
@@ -46,9 +46,9 @@ You will also see any lint errors in the console.
  
 ###### Este proyecto contiene los siguientes elementos
 
-bootstrap@5.2.0
-Font Awesome
-Google Fonts
-React Router v6
+bootstrap@5.2.0,
+Font Awesome,
+Google Fonts,
+React Router v6,
 y fue codificado en Visual Studio Code 1.68.0
 
