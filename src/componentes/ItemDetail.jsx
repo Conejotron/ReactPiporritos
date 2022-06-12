@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 import ItemCount from './ItemCount';
 
 import './Styles/ItemDetail.css';
@@ -6,11 +7,9 @@ import './Styles/ItemDetail.css';
 
 
 const ItemDetail = ({ item }) => {
-  const onAdd = (qty) => {
-    alert(`Has agregado ${qty} cervezas 🍺`);
-  };
+  const cartContext = useContext(CartContext);
+  const { addToCart } = cartContext;
 
-  console.log(item);
   return (
     <article className="product-detail">
       <img src={item.thumbnail} alt="" className="product-detail__img" />
@@ -27,7 +26,7 @@ const ItemDetail = ({ item }) => {
           <li>Type:</li>
           <li>{item.type}</li>
         </ul>
-        <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+        <ItemCount stock={item.stock} initial={1} onAdd={addToCart} />
       </div>
     </article>
   );

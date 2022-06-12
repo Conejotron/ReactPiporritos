@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-
+import React from 'react';
+import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -42,7 +42,9 @@ const NavBar = () => {
           <img src={brand} alt="logo" />
         </div>
         
-        <CartWidget />
+        <Link to="/cart">
+          <CartWidget />
+        </Link>
       </div>
     </header>
   );

@@ -1,20 +1,20 @@
 import React from 'react';
-import ItemListContainer from './componentes/ItemListContainer';
-import NavBar from './componentes/Navbar/Navbar';
-import Hero from './componentes/Hero';
-import ItemDetailContainer from './componentes/ItemDetailContainer';
+import CartProvider from './context/CartContext.js';
+import AppRouter from './routes/AppRouter.js';
 
 import './Style.css';
 
 
 export default function App() {
-  return (
-    <>
-      <NavBar />
-      <Hero title="El Maestro de la Cerveza" />
-      <ItemListContainer />
 
-      <ItemDetailContainer id={3} />
+
+  return (    
+    <>
+      <CartProvider>
+
+        <AppRouter />
+
+      </CartProvider> 
     </>
   );
 }
