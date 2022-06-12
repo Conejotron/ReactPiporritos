@@ -4,7 +4,7 @@ import { useState } from 'react';
 import './Styles/ItemCount.css';
 
 const ItemCount = ({ initial, stock, onAdd }) => {
-  //hook de estado
+  
   const [qty, setQty] = useState(initial);
 
   const addProduct = (num) => {

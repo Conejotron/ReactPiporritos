@@ -39,7 +39,9 @@ const NavBar = () => {
         </nav>
         
         <div className="logo-container">
+          <a href='/'>
           <img src={brand} alt="logo" />
+          </a>
         </div>
         
         <Link to="/cart">
