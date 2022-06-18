@@ -12,7 +12,7 @@ Este proyecto ha sido subido a https://github.com/Conejotron/ReactPiporritos
 
 - Se ingresa a la ruta base con "/".
 - Se accede al carrito con la ruta "/Cart".
-- También se puede acceder a los productos y detalles con el ruteo "/products" y "/detail/:id" respectivamente.
+- También se puede acceder a los productos, categorias y detalles con el ruteo "/products" y "/detail/:id" respectivamente.
 - El logo del menu esta linkeado a la ruta base
 - El icono del carrito en el menu muestra con un numero la cantidad de productos que contiene.
 - Se hace uso de los componentes sugeridos: NavBar, CartWidget, CartContext, Cart, Item, ItemList, ItemListContainer, ItemDetail, ItemDetailContainer, Hero, ItemCount.
