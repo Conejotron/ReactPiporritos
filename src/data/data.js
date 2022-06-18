@@ -9,7 +9,7 @@ export const productList = [
         'Kross Stout, es potente y compleja en la boca. Es una Cerveza Stout de color rubí con un cuerpo intenso y notas a café tostado y chocolate amargo. Lo que hoy en día se conoce como Stout proviene del Stout porter, la Porter más fuerte. La Cerveza Negra es la más premiada de nuestro portafolio y va muy bien con mariscos, postres de chocolate y quesos mantecosos.',
       size: 'L',
       vendor: 'Cerveceria Kross',
-      type: 'Stout',
+      category: 'Stout',
       id: 1,
     },
     {
@@ -22,7 +22,7 @@ export const productList = [
         'Kross Golden es nuestra cerveza más vendida y es la interpretación de nuestros maestros cerveceros del clásico estilo inglés Pale Ale. De color oro profundo y buen cuerpo con notas a caramelo y toffee. Utilizamos lúpulos Cascade y Glacier que le dan un delicado aroma floral y fresco al final.',
       size: 'L',
       vendor: 'Cerveceria Kross',
-      type: 'Pale Ale',
+      category: 'PaleAle',
       id: 2,
     },
     {
@@ -35,8 +35,9 @@ export const productList = [
         'Cerveza Kross 5 es una interpretación del estilo inglés ESB (Extra Special Bitter). Es una cerveza ámbar que tiene como principal característica una combinación de maltas de diferentes tostados, equilibrado con un amargor suave y un potente aroma a lúpulos. Utilizamos una técnica llamada Dry Hopping que consiste en incorporar lúpulo no sólo en la cocción sino que también durante la maduración. Esta técnica aporta un potente aroma floral pero no incide en el sabor.',
       size: 'L',
       vendor: 'Cerveceria Kross',
-      type: 'ESB (Extra Special Bitter)',
+      category: 'ESB',
       id: 3,
     },
   ];
+  
   

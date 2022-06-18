@@ -16,7 +16,7 @@ const CartProvider = (props) => {
         if (el.id === item.id) {
           
           el.qty += qty; 
-          return el; 
+          return el;
         } else {
           return el; 
         }

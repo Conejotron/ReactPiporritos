@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import ItemCategory from '../ItemCategory';
 
 import './Navbar.css';
 
@@ -17,16 +18,27 @@ const NavBar = () => {
           <FontAwesomeIcon icon={faBars} size="lg" color="white" />
           <span>Menu</span>
         </div>
-
-        
+               
         <nav>
           <ul className="nav-container">
             <li>
               <a href="/">Inicio</a>
             </li>
             <li className="products-item">
-              <a href="/">
-                Productos <span className="arrow"></span>
+              <a href="/products">
+                Productos <span className="arrow"></span>                
+              </a>
+            </li>
+            <li className="Category">
+              <a href="/category">
+                Categoria <span className="arrow"></span>
+              <li><Link to="/detail/1">Stout</Link>          
+              </li> 
+              <li><Link to="/detail/2">Pale Ale</Link>
+              </li>
+              <li><Link to="/detail/3">ESB</Link>
+              </li>
+              <ItemCategory />
               </a>
             </li>
             <li>

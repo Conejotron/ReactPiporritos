@@ -1,4 +1,4 @@
-Proyecto Primera entrega Final de React JS de CoderHouse
+# Proyecto Primera entrega Final de React JS de CoderHouse
 
 ( Comisión 31865 )
 
@@ -18,7 +18,7 @@ Este proyecto ha sido subido a https://github.com/Conejotron/ReactPiporritos
 - Se hace uso de los componentes sugeridos: NavBar, CartWidget, CartContext, Cart, Item, ItemList, ItemListContainer, ItemDetail, ItemDetailContainer, Hero, ItemCount.
 
 
-### El simulador permite lo siguiente :
+## El simulador permite lo siguiente :
 
 
 - Navegar por la pagina de productos e ir a sus detalles.
@@ -35,7 +35,7 @@ This project was bootstrapped with Create React App.
 In the project directory, you can run:
 
 
-##### npm start
+#### npm start
 
 Runs the app in the development mode.
 Open http://localhost:3000 to view it in the browser.
@@ -44,7 +44,7 @@ The page will reload if you make edits.
 You will also see any lint errors in the console.
 
  
-###### Este proyecto contiene los siguientes elementos
+#### Este proyecto contiene los siguientes elementos
 
 bootstrap@5.2.0
 Font Awesome

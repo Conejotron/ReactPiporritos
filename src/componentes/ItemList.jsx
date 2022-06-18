@@ -24,6 +24,7 @@ const ItemList = () => {
                   price={product.price}
                   stock={product.stock}
                   id={product.id}
+                  category={product.category}
                 />
               </div>
             );
@@ -35,5 +36,7 @@ const ItemList = () => {
     </div>
   );
 };
+
+
 
 export default ItemList;

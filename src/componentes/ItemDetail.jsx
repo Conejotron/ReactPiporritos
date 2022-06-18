@@ -23,8 +23,8 @@ const ItemDetail = ({ item }) => {
           <li>{item.size}</li>
           <li>Vendor:</li>
           <li>{item.vendor}</li>
-          <li>Type:</li>
-          <li>{item.type}</li>
+          <li>Category:</li>
+          <li>{item.category}</li>
         </ul>
         <ItemCount stock={item.stock} initial={1} onAdd={addToCart} />
       </div>
