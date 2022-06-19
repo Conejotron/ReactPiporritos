@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import ItemCategory from '../ItemCategory';
+
 
 import './Navbar.css';
+
 
 const NavBar = () => {
   const brand =
@@ -30,15 +31,14 @@ const NavBar = () => {
               </a>
             </li>
             <li className="Category">
-              <a href="/">
+              <a href="/products">
                 Categoria <span className="arrow"></span>
-              <li><Link to="/detail/1">Stout</Link>          
+              <li><Link to="/products/categoryid">Stout</Link>          
               </li> 
-              <li><Link to="/detail/2">Pale Ale</Link>
+              <li><Link to="/products/categoryid">Pale Ale</Link>
               </li>
-              <li><Link to="/detail/3">ESB</Link>
-              </li>
-              <ItemCategory />
+              <li><Link to="/products/categodyid">ESB</Link>
+              </li>              
               </a>
             </li>
             <li>

@@ -1,17 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Item from './Item';
-import { getAllProductsFromDB } from '../Helpers/getData.js';
 
 import './Styles/ItemList.css';
 
 const ItemList = () => {
-  const [products, setProducts] = useState([]);
+  const [products] = useState([]);
 
-  useEffect(() => {
-    getAllProductsFromDB(setProducts);
-  }, []);
-
-  return (
+    return (
     <div className="product-list-container">
       {products.length ? (
         <>

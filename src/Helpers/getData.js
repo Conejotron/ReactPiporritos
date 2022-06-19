@@ -31,4 +31,13 @@ const getProductById = async (id, setState) => {
   }
 };
 
-export { getAllProductsFromDB, getProductById };
+const getProductsByCategory = (categoryId) => {
+  return new Promise((resolve, reject) => {
+      setTimeout(() => {
+          resolve(productList.filter(prod => prod.category === categoryId))
+      }, 500)
+  })
+}
+
+
+export { getAllProductsFromDB, getProductById, getProductsByCategory };
