@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Item from './Item';
 
 import './Styles/ItemList.css';
 
-const ItemList = () => {
-  const [products] = useState([]);
+const ItemList = ({products}) => {  
 
     return (
     <div className="product-list-container">

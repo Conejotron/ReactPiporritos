@@ -11,7 +11,7 @@ const CartItem = ({ item, deleteCartById }) => {
                 <FontAwesomeIcon icon={faTimes} color={'#1d1d1d'} size={'1x'}/>
             </div>
             <div className="cart-item__img">
-                <img src={item.thumbnail}/>
+                <img src={item.thumbnail} alt="Cart Item Img"/>
             </div>
             <h2 className="cart-item__name">{item.name}</h2>
             <span className="cart-item__price">${item.price}</span>

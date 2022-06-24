@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Styles/ItemListContainer.css';
-import { getAllProductsFromDB, getProductById, getProductsByCategory } from '../Helpers/getData.js';
+// import { getAllProductsFromDB, getProductById, getProductsByCategory } from '../Helpers/getData.js';
 import { useParams } from 'react-router-dom';
 import ItemList from './ItemList';
 import { getDocs, collection, query, where } from 'firebase/firestore';
@@ -20,7 +20,7 @@ const ItemListContainer = (props) => {
       setLoading(true)
       
         const collectionRef = categoryId ? ( 
-            query(collection(dbase, 'products'), where('category', '==', categoryId))
+            query(collection( dbase, 'products'), where('category', '==', categoryId))
         ) : ( collection(dbase, 'products') )
 
         getDocs(collectionRef).then(response => {
@@ -50,11 +50,14 @@ const ItemListContainer = (props) => {
           <div>
               <h1>{title}</h1>
               { products.length > 0 
-                  ? <ItemList products={products}/>
-                  : <h1>No hay productos</h1>
+                   ? <ItemList products={products}/>                  
+                  : <h1>No hay productos</h1>                  
               }
-          </div>
+              
+          </div>          
       )
+      
+      
   }        
 
 export default ItemListContainer;

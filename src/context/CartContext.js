@@ -27,8 +27,12 @@ const CartProvider = (props) => {
       
       let newProduct = { ...item, qty };
       setCart([...cart, newProduct]);
+      return setTotal;
     }
+    return total 
   };
+
+  
 
   const deleteCartById = (id) => {
     //Opción usando splice()
