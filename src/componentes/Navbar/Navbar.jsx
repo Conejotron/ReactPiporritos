@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { useParams } from 'react-router-dom';
 
 
 import './Navbar.css';
@@ -11,6 +12,9 @@ import './Navbar.css';
 const NavBar = () => {
   const brand =
     'https://i.ibb.co/3hn05sy/kross-2-1.png';
+   
+    const { categoryId } = useParams()
+
   return (
     <header className={`header background--transparent`}>
       <div className="header-container">
@@ -31,13 +35,13 @@ const NavBar = () => {
               </a>
             </li>
             <li className="Category">
-              <a href="/products">
+              <a href="/category">
                 Categoria <span className="arrow"></span>
-              <li><Link to="/products/categoryid">Stout</Link>          
+              <li><Link to="/category/">{categoryId} Stout</Link>          
               </li> 
-              <li><Link to="/products/categoryid">Pale Ale</Link>
+              <li><Link to="/category/">{categoryId} Pale Ale</Link>
               </li>
-              <li><Link to="/products/categodyid">ESB</Link>
+              <li><Link to="/category/">{categoryId} ESB</Link>
               </li>              
               </a>
             </li>

@@ -7,6 +7,7 @@ import { getDocs, collection, query, where } from 'firebase/firestore';
 import { dbase } from '../services/firebase';
 
 
+
 const ItemListContainer = (props) => {
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(false)
@@ -14,7 +15,7 @@ const ItemListContainer = (props) => {
   const [title, setTitle] = useState('Welcome')
   
   const { categoryId } = useParams()
-
+  
 
   useEffect(() => {
       setLoading(true)

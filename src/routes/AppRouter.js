@@ -9,12 +9,13 @@ import CartPage from "../pages/CartPage";
 import ItemListContainer from '../componentes/ItemListContainer';
 
 const AppRouter = () => {
+
   return (
     <Router>
         <NavBar background={'transparent'} />
         <Routes>
           <Route path="/cart" element={<CartPage />} />
-          <Route path="/category/:categoryid" element={<ItemListContainer />} />
+          <Route path="/category/:categoryId" element={<ItemListContainer />} />
           <Route path="/detail/:id" element={<DetailPage />} />  
           <Route path="/products" element={<Products />} />               
           <Route path="/" element={<Home />} />     

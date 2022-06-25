@@ -4,6 +4,7 @@ import ItemDetail from './ItemDetail';
 import './Styles/ItemDetailContainer.css';
 
 
+
 const ItemDetailContainer = ({ id }) => {
   const [product, setProduct] = useState(null);
 

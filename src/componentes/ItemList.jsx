@@ -4,12 +4,12 @@ import Item from './Item';
 import './Styles/ItemList.css';
 
 const ItemList = ({products}) => {  
-
+  
     return (
     <div className="product-list-container">
-      {products.length ? (
+       {products.length ? ( 
         <>
-          {products.map((product) => {
+        {products.map((product) => {
             return (
               <div key={product.id}>
                 <Item
@@ -24,9 +24,9 @@ const ItemList = ({products}) => {
             );
           })}
         </>
-      ) : (
+      )   : (
         <p>Cargando productos...</p>
-      )}
+      )}   
     </div>
   );
 };
