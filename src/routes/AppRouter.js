@@ -16,7 +16,7 @@ const AppRouter = () => {
         <Routes>
           <Route path="/cart" element={<CartPage />} />
           <Route path="/category/:categoryId" element={<ItemListContainer />} />
-          <Route path="/detail/:id" element={<DetailPage />} />  
+          <Route path="/detail/:productId" element={<DetailPage />} />  
           <Route path="/products" element={<Products />} />               
           <Route path="/" element={<Home />} />     
           <Route path="*" element={<Page404 />} />          

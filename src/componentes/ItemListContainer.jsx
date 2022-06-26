@@ -38,7 +38,7 @@ const ItemListContainer = (props) => {
 
       useEffect(() => {
           setTimeout(() => {
-              setTitle('Estos son nuestros productos')
+              setTitle('.')
           }, 3000)
       }, [])
   
