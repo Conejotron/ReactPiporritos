@@ -6,64 +6,76 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 
 import './Navbar.css';
+import ItemListContainer from '../ItemListContainer';
 
 
-const NavBar = () => {
-  const brand =
-    'https://i.ibb.co/3hn05sy/kross-2-1.png';   
-    
-
+const NavBar = () => { 
+  
   return (
-    <header className={`header background--transparent`}>
-      <div className="header-container">
-        
-        <div className="menu-button">
-          <FontAwesomeIcon icon={faBars} size="lg" color="white" />
-          <span>Menu</span>
-        </div>
-               
-        <nav>
-          <ul className="nav-container">
-            <li>
-              <a href="/">Inicio</a>
-            </li>
-            <li className="products-item">
-              <a href="/products">
-                Productos <span className="arrow"></span>
-                <itemlistcontainer />                
-              </a>
-            </li>
-            <li className="Category">
-              <a href="/category">
-                Categoria <span className="arrow"></span>
-              <li><Link to="/category/Stout">Stout</Link>                       
-              </li> 
-              <li><Link to="/category/Pale Ale">Pale Ale</Link>
-              </li>
-              <li><Link to="/category/ESB">ESB</Link>
-              </li>              
-              </a>
-            </li>
-            <li>
-              <a href="/">Blog</a>
-            </li>
-            <li>
-              <a href="/">Contacto</a>
-            </li>
-          </ul>
-        </nav>
-        
-        <div className="logo-container">
-          <a href='/'>
-          <img src={brand} alt="logo" />
-          </a>
-        </div>
-        
-        <Link to="/cart">
-          <CartWidget />
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <Link className="navbar-brand" to="/">
+        <img src="https://i.ibb.co/3hn05sy/kross-2-1.png" alt="Kross" />
         </Link>
-      </div>
-    </header>
+
+        <div className="icon navbar-nav ">
+        <li>
+          <Link className="nav-link" to="/cart">
+          <CartWidget />
+          </Link>
+        </li>
+        </div>           
+
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>     
+          
+        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul className="nav-container ml-auto">
+              
+              <div className="menu-button">
+                <FontAwesomeIcon icon={faBars} size="lg" color="white" />
+                <span>Menu</span>
+              </div>
+
+              <li className="nav-item active">
+                <Link className="nav-link" to="/">
+                  Inicio <span className="sr-only">(current)</span>
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link className="nav-link" to="/products">
+                  Productos
+                </Link>
+              </li>              
+                 
+              <li className="Category">
+                  <ul class="sub"> 
+                      <a href="/category">Categorias <span className="arrow"></span></a>                  
+                          <li><Link to="/category/Stout">Stout</Link></li> 
+                          <li><Link to="/category/Pale Ale">Pale Ale</Link></li>
+                          <li><Link to="/category/ESB">ESB</Link></li>              
+                  </ul>
+              </li>
+              <li>
+                  <a href="/">Blog</a>
+              </li>
+              <li>
+                  <a href="/">Contacto</a>
+              </li>            
+            </ul>             
+                
+                       
+        </div>     
+    </nav>   
   );
 };
 

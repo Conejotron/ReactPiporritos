@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { getProductById } from '../Helpers/getData.js';
 import ItemDetail from './ItemDetail';
 import { getDoc, doc } from 'firebase/firestore';
 import { dbase } from '../services/firebase';
@@ -21,7 +20,7 @@ const ItemDetailContainer = () => {
     const docRef = doc(dbase, 'products', productId)
 
     getDoc(docRef).then(doc => {
-      const productFormatted = { id: doc.id, ...doc.data() }
+      const productFormatted = { id: doc.id, ...doc.data() }      
           setProduct(productFormatted)
       }).catch(error => {
           console.log(error)
