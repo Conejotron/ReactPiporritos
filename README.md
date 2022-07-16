@@ -54,4 +54,5 @@ Google Fonts,
 React Router v6,
 Firebase,
 y fue codificado en Visual Studio Code 1.68.0
+![2022-07-15-23-27-13](https://user-images.githubusercontent.com/97346178/179337523-815ddca7-9366-4e0d-9a56-c6396ab64b9d.gif)
 
