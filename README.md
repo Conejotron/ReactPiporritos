@@ -1,4 +1,4 @@
-# Proyecto Primera entrega Final de React JS de CoderHouse
+# Proyecto entrega Final de React JS de CoderHouse
 
 ( Comisión 31865 )
 
