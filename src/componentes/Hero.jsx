@@ -12,8 +12,7 @@ const Hero = ({ title }) => {
           <p>
             ¡La mente muy clara y la cerveza muy fría! Ven a conocer las
             mejores cervezas de Chile.
-          </p>
-          <button className="button-primary">Comprar</button>
+          </p>          
         </article>
       </div>
     </section>

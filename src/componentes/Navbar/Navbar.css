@@ -45,12 +45,14 @@
   
   .nav-container li a {
     text-decoration: none;
-    color: white;    
+    color: rgba(235, 161, 1, 0.9);    
     font-weight: 500;
     font-size: 18px;
   }
 
   .navbar-collapse ml-auto {
+    text-decoration: none;
+    color: rgba(235, 161, 1, 0.9);
     margin-right: 50px !important;
   }
   .navbar-collapse a {
@@ -109,19 +111,22 @@
   }
 
   .navbar {
+    display: flex;
+    flex-flow: row wrap;
     color: white;
-    background-color: black !important;
+    background-color: none;
   }
   
   .navbar-brand h2 {
-    margin-left: 40px;
+    margin-left: 50px;
   }
 
   .navbar-brand img {
-    width: 80px;
+    width: 70px;
   }
 
   .navbar-collapse .ml-auto {    
+      color: white;
       margin-right: 50px !important;
   }
   
@@ -134,7 +139,7 @@
   }
 
   .icon {
-    display: none;
+    display:contents;
   }
 
   @media only screen and (max-width: 992px) {

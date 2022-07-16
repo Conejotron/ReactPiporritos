@@ -1,13 +1,13 @@
 import React, { createContext, useState } from 'react';
 
-export const CartContext = createContext(null);
+export const CartContext = createContext();
 
 const CartProvider = (props) => {
  
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
 
-  
+    
   const addToCart = (item, qty) => {
     
     if (cart.some((el) => el.id === item.id)) {
@@ -29,16 +29,20 @@ const CartProvider = (props) => {
       setCart([...cart, newProduct]);
       return setTotal;
     }
-    return total 
+    return total;
   };
 
-  
+  const getTotal = () => {
+    let total = 0
+    cart.forEach(el=> {
+        total += el.qty * el.price
+    })
+
+    return total;
+};
 
   const deleteCartById = (id) => {
-    //Opción usando splice()
-    //const newCart = [...cart];
-    // let index = newCart.findIndex((el) => el.id === id);
-    // newCart.splice(index, 1);
+    
     const newCart = cart.filter((el) => el.id !== id);
     setCart(newCart);
   };
@@ -55,6 +59,7 @@ const CartProvider = (props) => {
         addToCart,
         deleteCartById,
         deleteCart,
+        getTotal
       }}
     >
       {props.children}

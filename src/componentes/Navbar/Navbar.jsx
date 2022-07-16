@@ -6,13 +6,12 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 
 import './Navbar.css';
-import ItemListContainer from '../ItemListContainer';
 
 
 const NavBar = () => { 
   
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
         <Link className="navbar-brand" to="/">
         <img src="https://i.ibb.co/3hn05sy/kross-2-1.png" alt="Kross" />
         </Link>
@@ -57,20 +56,21 @@ const NavBar = () => {
                 </Link>
               </li>              
                  
-              <li className="Category">
-                  <ul class="sub"> 
-                      <a href="/category">Categorias <span className="arrow"></span></a>                  
-                          <li><Link to="/category/Stout">Stout</Link></li> 
-                          <li><Link to="/category/Pale Ale">Pale Ale</Link></li>
-                          <li><Link to="/category/ESB">ESB</Link></li>              
+              <li className="nav-item">
+                  <ul className="nav-link"> 
+                      <a href="/Category">Categorias</a>
+                      <li><Link to="/category/Stout">Stout</Link></li> 
+                      <li><Link to="/category/Pale Ale">Pale Ale</Link></li>
+                      <li><Link to="/category/ESB">ESB</Link></li>                
                   </ul>
               </li>
-              <li>
-                  <a href="/">Blog</a>
+              <li className="nav-link">
+                  <a href="http://elrincondelcervecero.com/">Blog</a>
               </li>
-              <li>
-                  <a href="/">Contacto</a>
-              </li>            
+              <li className="nav-link">
+                  <a href="mailto:daniel.arenasc@gmail.com">Contacto</a>
+              </li>
+              
             </ul>             
                 
                        

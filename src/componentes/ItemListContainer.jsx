@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import './Styles/ItemListContainer.css';
-// import { getAllProductsFromDB, getProductById, getProductsByCategory } from '../Helpers/getData.js';
 import { useParams } from 'react-router-dom';
 import ItemList from './ItemList';
 import { getDocs, collection, query, where } from 'firebase/firestore';
 import { dbase } from '../services/firebase';
+import { Link } from 'react-router-dom';
 
-
+import './Styles/ItemListContainer.css';
 
 const ItemListContainer = (props) => {
   const [products, setProducts] = useState([])
@@ -38,7 +37,7 @@ const ItemListContainer = (props) => {
 
       useEffect(() => {
           setTimeout(() => {
-              setTitle('.')
+              setTitle('Nuestras Cervezas')
           }, 3000)
       }, [])
   
@@ -48,14 +47,14 @@ const ItemListContainer = (props) => {
   
   
       return(
-          <div>
+            <div className="product-detail__info">
               <h1>{title}</h1>
               { products.length > 0 
                    ? <ItemList products={products}/>                  
                   : <h1>No hay productos</h1>                  
               }
-              
-          </div>          
+              <Link to='/cart'>Terminar compra</Link>
+            </div>          
       )
       
       

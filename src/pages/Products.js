@@ -1,12 +1,12 @@
 import React from 'react';
-import ItemList from '../componentes/ItemList';
+import ItemListContainer from '../componentes/ItemListContainer';
 
 import './styles/Products.css';
 
 const Products = () => {
     return (
         <main className="products-page-container">
-            <ItemList />
+            <ItemListContainer />
         </main>
     )
 }

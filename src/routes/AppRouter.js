@@ -6,7 +6,8 @@ import Home from "../pages/Home";
 import Products from "../pages/Products";
 import Page404 from "../pages/Page404";
 import CartPage from "../pages/CartPage";
-import ItemListContainer from '../componentes/ItemListContainer';
+import Categories from '../pages/Categories';
+
 
 const AppRouter = () => {
 
@@ -15,7 +16,7 @@ const AppRouter = () => {
         <NavBar background={'transparent'} />
         <Routes>
           <Route path="/cart" element={<CartPage />} />
-          <Route path="/category/:categoryId" element={<ItemListContainer />} />
+          <Route path="/category/:categoryId" element={<Categories />} />
           <Route path="/detail/:productId" element={<DetailPage />} />  
           <Route path="/products" element={<Products />} />               
           <Route path="/" element={<Home />} />     
